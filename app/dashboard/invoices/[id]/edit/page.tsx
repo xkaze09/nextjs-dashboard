@@ -5,8 +5,9 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Invoices | Acme Dashboard',
+  title: 'Invoices',
 };
+
 export default async function Page({ params }: { params: { id: string } }) {
   const id = params.id;
   const [invoice, customers] = await Promise.all([
