@@ -7,6 +7,21 @@ import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 import { fetchInvoicesPages } from '@/app/lib/data';
  
+
+// /app/dashboard/invoices/page.tsx
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Invoices',
+  description: 'View and manage all your invoices in the Acme Dashboard.',
+  keywords: ['invoices', 'dashboard', 'billing'],
+  openGraph: {
+    title: 'Invoices | Acme Dashboard',
+    description: 'Manage your invoices efficiently.',
+    images: ['https://yourdomain.com/opengraph-image.jpg'],
+  },
+};
+
 export default async function Page(props: {
     searchParams?: Promise<{
         query?: string;
